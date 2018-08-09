@@ -1,0 +1,39 @@
+CREATE TABLE users 
+(
+id int unsigned not null auto_increment, 
+first_name varchar(255) not null, 
+last_name varchar(255) not null, 
+email varchar(255) not null, 
+password varchar(255) not null, 
+constraint pk_example primary key (id) 
+);
+
+
+
+
+ALTER TABLE users ALTER COLUMN password varchar(512) NOT NULL;
+
+
+
+INSERT INTO users (first_name, last_name, email, password)
+VALUES ('Bogus', 'Kot', 'bogus@friz.pl', '#$#$#$#$#$'); 
+
+{
+"first_name":"Bogus",
+"last_name":"Kot",
+"email":"bogus6@friz.pl",
+"password":"asdf"
+}
+
+
+https://stackoverflow.com/questions/50093144/mysql-8-0-client-does-not-support-authentication-protocol-requested-by-server
+
+
+https://www.w3schools.com/nodejs/nodejs_mysql_select.asp
+
+https://www.npmjs.com/package/password-hash
+
+// https://www.codementor.io/mayowa.a/how-to-build-a-simple-session-based-authentication-system-with-nodejs-from-scratch-6vn67mcy3
+
+
+node_modules/.bin/sequelize model:generate --name User --attributes firstName:string,lastName:string,email:string,email:string
